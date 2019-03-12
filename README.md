@@ -22,7 +22,7 @@ const test: string[] = "test 1 2 3 --test OK".split(" ");
 const testOpt: IOptionDef = {
 	name: "test",
 	alias: "t",
-	type: "string,
+	type: "string",
 };
 const result: IArguments = arguets(test, [testOpt]);
 /*

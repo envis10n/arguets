@@ -76,22 +76,22 @@
 				<h2 id="usage">Usage</h2>
 				<p><a href="https://envis10n.github.io/arguets/">Docs</a></p>
 				<p>Example:</p>
-				<pre><code class="language-ts">// TypeScript
-import arguets, { IOptionDef, IArguments } from &quot;arguets&quot;;
-const test: string[] = &quot;test 1 2 3 --test OK&quot;.split(&quot; &quot;);
-const testOpt: IOptionDef = {
-    name: &quot;test&quot;,
-    alias: &quot;t&quot;,
-    type: &quot;string,
+				<pre><code class="language-ts"><span class="hljs-comment">// TypeScript</span>
+<span class="hljs-keyword">import</span> arguets, { IOptionDef, IArguments } <span class="hljs-keyword">from</span> <span class="hljs-string">"arguets"</span>;
+<span class="hljs-keyword">const</span> test: <span class="hljs-built_in">string</span>[] = <span class="hljs-string">"test 1 2 3 --test OK"</span>.split(<span class="hljs-string">" "</span>);
+<span class="hljs-keyword">const</span> testOpt: IOptionDef = {
+    name: <span class="hljs-string">"test"</span>,
+    alias: <span class="hljs-string">"t"</span>,
+    <span class="hljs-keyword">type</span>: <span class="hljs-string">"string"</span>,
 };
-const result: IArguments = arguets(test, [testOpt]);
-/*
+<span class="hljs-keyword">const</span> result: IArguments = arguets(test, [testOpt]);
+<span class="hljs-comment">/*
     Result:
     {
-        &quot;args&quot;: [&quot;test&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;],
-        &quot;options&quot;: [{&quot;name&quot;:&quot;test&quot;, value: &quot;OK&quot;}]
+        "args": ["test", "1", "2", "3"],
+        "options": [{"name":"test", value: "OK"}]
     }
-*/</code></pre>
+*/</span></code></pre>
 				<pre><code class="language-js"><span class="hljs-comment">// JavaScript</span>
 <span class="hljs-keyword">const</span> arguets = <span class="hljs-built_in">require</span>(<span class="hljs-string">"arguets"</span>);
 <span class="hljs-keyword">const</span> test = <span class="hljs-string">"test 1 2 3 --test OK"</span>.split(<span class="hljs-string">" "</span>);
