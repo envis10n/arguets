@@ -1,0 +1,20 @@
+{
+  "name": "arguets",
+  "version": "1.0.0",
+  "description": "TypeScript arguments parser.",
+  "main": "dist/lib.js",
+  "scripts": {
+    "start": "tsc && node .",
+    "docgen": "typedoc ./src",
+    "build": "tsc && typedoc ./src"
+  },
+  "repository": "https://github.com/envis10n/arguets.git",
+  "author": "envis10n <envis10n@protonmail.com>",
+  "license": "MIT",
+  "private": false,
+  "types": "src/lib.ts",
+  "devDependencies": {
+    "typedoc": "^0.14.2",
+    "typescript": "^3.3.3333"
+  }
+}
