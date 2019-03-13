@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>arguets | ArgueTS</title>
+	<title>ArgueTS</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="arguets.html">arguets</a>
+					<a href="arguets.html">ArgueTS</a>
 				</li>
 			</ul>
-			<h1>Module arguets</h1>
+			<h1>Module ArgueTS</h1>
 		</div>
 	</div>
 </header>
@@ -69,32 +69,32 @@
 			<section class="tsd-panel">
 				<h3 class="tsd-before-signature">Callable</h3>
 				<ul class="tsd-signatures tsd-kind-module">
-					<li class="tsd-signature tsd-kind-icon">arguets<span class="tsd-signature-symbol">(</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, defs<span class="tsd-signature-symbol">: </span><a href="../interfaces/arguets.ioptiondef.html" class="tsd-signature-type">IOptionDef</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/arguets.iarguments.html" class="tsd-signature-type">IArguments</a></li>
+					<li class="tsd-signature tsd-kind-icon">ArgueTS<span class="tsd-signature-symbol">(</span>args<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, defs<span class="tsd-signature-symbol">?: </span><a href="../interfaces/arguets.ioptiondef.html" class="tsd-signature-type">IOptionDef</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/arguets.iarguments.html" class="tsd-signature-type">IArguments</a></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/envis10n/arguets/blob/53f9a7f/src/lib.ts#L114">lib.ts:114</a></li>
+								<li>Defined in <a href="https://github.com/envis10n/arguets/blob/10a503b/src/lib.ts#L108">lib.ts:108</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
-								<p>Returns the processed arguments array and an array of parsed command line options.</p>
+								<p>Returns the processed arguments array and an object containing the options parsed.</p>
 							</div>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
-								<h5>args: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> args: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;process.argv.slice(2)</span></h5>
 								<div class="tsd-comment tsd-typography">
-									<p>The argument array to process.</p>
+									<p>Arguments array. Default: process.argv.slice(2)</p>
 								</div>
 							</li>
 							<li>
-								<h5>defs: <a href="../interfaces/arguets.ioptiondef.html" class="tsd-signature-type">IOptionDef</a><span class="tsd-signature-symbol">[]</span></h5>
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> defs: <a href="../interfaces/arguets.ioptiondef.html" class="tsd-signature-type">IOptionDef</a><span class="tsd-signature-symbol">[]</span></h5>
 								<div class="tsd-comment tsd-typography">
-									<p>An array of option definitions.</p>
+									<p>Option definition array. Default: undefined.</p>
 								</div>
 							</li>
 						</ul>
@@ -109,8 +109,10 @@
 						<section class="tsd-index-section ">
 							<h3>Interfaces</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/arguets.iarguetsoptions.html" class="tsd-kind-icon">IArgueTSOptions</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/arguets.iarguments.html" class="tsd-kind-icon">IArguments</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/arguets.iclioption.html" class="tsd-kind-icon">ICLIOption</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/arguets.iclioptionobj.html" class="tsd-kind-icon">ICLIOption<wbr>Obj</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/arguets.ioptiondef.html" class="tsd-kind-icon">IOption<wbr>Def</a></li>
 							</ul>
 						</section>
@@ -125,17 +127,23 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-module">
-						<a href="arguets.html">arguets</a>
+						<a href="arguets.html">ArgueTS</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/arguets.iarguetsoptions.html" class="tsd-kind-icon">IArgueTSOptions</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="../interfaces/arguets.iarguments.html" class="tsd-kind-icon">IArguments</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="../interfaces/arguets.iclioption.html" class="tsd-kind-icon">ICLIOption</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/arguets.iclioptionobj.html" class="tsd-kind-icon">ICLIOption<wbr>Obj</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="../interfaces/arguets.ioptiondef.html" class="tsd-kind-icon">IOption<wbr>Def</a>

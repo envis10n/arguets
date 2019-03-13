@@ -17,14 +17,14 @@ TypeScript arguments parser.
 Example:
 ```ts
 // TypeScript
-import arguets, { IOptionDef, IArguments } from "arguets";
+import ArgueTS, { IOptionDef, IArguments } from "arguets";
 const test: string[] = "test 1 2 3 --test OK".split(" ");
 const testOpt: IOptionDef = {
 	name: "test",
 	alias: "t",
 	type: "string",
 };
-const result: IArguments = arguets(test, [testOpt]);
+const result: IArguments = ArgueTS(test, [testOpt]);
 /*
 	Result:
 	{
@@ -36,14 +36,14 @@ const result: IArguments = arguets(test, [testOpt]);
 
 ```js
 // JavaScript
-const arguets = require("arguets");
+const ArgueTS = require("arguets");
 const test = "test 1 2 3 --test OK".split(" ");
 const testOpt = {
 	name: "test",
 	alias: "t",
 	type: "string"
 };
-const result = arguets(test, [testOpt]);
+const result = ArgueTS(test, [testOpt]);
 /*
 	Result:
 	{

@@ -77,14 +77,14 @@
 				<p><a href="https://envis10n.github.io/arguets/">Docs</a></p>
 				<p>Example:</p>
 				<pre><code class="language-ts"><span class="hljs-comment">// TypeScript</span>
-<span class="hljs-keyword">import</span> arguets, { IOptionDef, IArguments } <span class="hljs-keyword">from</span> <span class="hljs-string">"arguets"</span>;
+<span class="hljs-keyword">import</span> ArgueTS, { IOptionDef, IArguments } <span class="hljs-keyword">from</span> <span class="hljs-string">"arguets"</span>;
 <span class="hljs-keyword">const</span> test: <span class="hljs-built_in">string</span>[] = <span class="hljs-string">"test 1 2 3 --test OK"</span>.split(<span class="hljs-string">" "</span>);
 <span class="hljs-keyword">const</span> testOpt: IOptionDef = {
     name: <span class="hljs-string">"test"</span>,
     alias: <span class="hljs-string">"t"</span>,
     <span class="hljs-keyword">type</span>: <span class="hljs-string">"string"</span>,
 };
-<span class="hljs-keyword">const</span> result: IArguments = arguets(test, [testOpt]);
+<span class="hljs-keyword">const</span> result: IArguments = ArgueTS(test, [testOpt]);
 <span class="hljs-comment">/*
     Result:
     {
@@ -93,14 +93,14 @@
     }
 */</span></code></pre>
 				<pre><code class="language-js"><span class="hljs-comment">// JavaScript</span>
-<span class="hljs-keyword">const</span> arguets = <span class="hljs-built_in">require</span>(<span class="hljs-string">"arguets"</span>);
+<span class="hljs-keyword">const</span> ArgueTS = <span class="hljs-built_in">require</span>(<span class="hljs-string">"arguets"</span>);
 <span class="hljs-keyword">const</span> test = <span class="hljs-string">"test 1 2 3 --test OK"</span>.split(<span class="hljs-string">" "</span>);
 <span class="hljs-keyword">const</span> testOpt = {
     <span class="hljs-attr">name</span>: <span class="hljs-string">"test"</span>,
     <span class="hljs-attr">alias</span>: <span class="hljs-string">"t"</span>,
     <span class="hljs-attr">type</span>: <span class="hljs-string">"string"</span>
 };
-<span class="hljs-keyword">const</span> result = arguets(test, [testOpt]);
+<span class="hljs-keyword">const</span> result = ArgueTS(test, [testOpt]);
 <span class="hljs-comment">/*
     Result:
     {
@@ -117,7 +117,7 @@
 						<a href="globals.html"><em>Globals</em></a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/arguets.html">arguets</a>
+						<a href="modules/arguets.html">ArgueTS</a>
 					</li>
 				</ul>
 			</nav>

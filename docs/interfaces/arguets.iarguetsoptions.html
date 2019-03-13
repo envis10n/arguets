@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IOptionDef | ArgueTS</title>
+	<title>IArgueTSOptions | ArgueTS</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -59,10 +59,10 @@
 					<a href="../modules/arguets.html">ArgueTS</a>
 				</li>
 				<li>
-					<a href="arguets.ioptiondef.html">IOptionDef</a>
+					<a href="arguets.iarguetsoptions.html">IArgueTSOptions</a>
 				</li>
 			</ul>
-			<h1>Interface IOptionDef</h1>
+			<h1>Interface IArgueTSOptions</h1>
 		</div>
 	</div>
 </header>
@@ -72,7 +72,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Defines a command-line option.</p>
+						<p>ArgueTS Instance Options.</p>
 					</div>
 				</div>
 			</section>
@@ -80,7 +80,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">IOptionDef</span>
+						<span class="target">IArgueTSOptions</span>
 					</li>
 				</ul>
 			</section>
@@ -91,11 +91,7 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="arguets.ioptiondef.html#alias" class="tsd-kind-icon">alias</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="arguets.ioptiondef.html#defaultvalue" class="tsd-kind-icon">default<wbr>Value</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="arguets.ioptiondef.html#name" class="tsd-kind-icon">name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="arguets.ioptiondef.html#switch" class="tsd-kind-icon">switch</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="arguets.ioptiondef.html#type" class="tsd-kind-icon">type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="arguets.iarguetsoptions.html#removeundefined" class="tsd-kind-icon">remove<wbr>Undefined</a></li>
 							</ul>
 						</section>
 					</div>
@@ -104,78 +100,17 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="alias" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> alias</h3>
-					<div class="tsd-signature tsd-kind-icon">alias<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<a name="removeundefined" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> remove<wbr>Undefined</h3>
+					<div class="tsd-signature tsd-kind-icon">remove<wbr>Undefined<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/envis10n/arguets/blob/10a503b/src/lib.ts#L138">lib.ts:138</a></li>
+							<li>Defined in <a href="https://github.com/envis10n/arguets/blob/10a503b/src/lib.ts#L125">lib.ts:125</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>An alias for the option name. Parsed as -n</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="defaultvalue" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> default<wbr>Value</h3>
-					<div class="tsd-signature tsd-kind-icon">default<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/envis10n/arguets/blob/10a503b/src/lib.ts#L147">lib.ts:147</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Default value of this option.</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="name" class="tsd-anchor"></a>
-					<h3>name</h3>
-					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/envis10n/arguets/blob/10a503b/src/lib.ts#L134">lib.ts:134</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>The name of the option. Parsed as --name</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="switch" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> switch</h3>
-					<div class="tsd-signature tsd-kind-icon">switch<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/envis10n/arguets/blob/10a503b/src/lib.ts#L151">lib.ts:151</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Whether or not this option is a switch and takes no argument.</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="type" class="tsd-anchor"></a>
-					<h3>type</h3>
-					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"number"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"string"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"boolean"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"json"</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/envis10n/arguets/blob/10a503b/src/lib.ts#L143">lib.ts:143</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>The type of this option.
-							When parsed, it will return the value as this type.</p>
+							<p>Whether or not to filter out options that were not passed in the definitions array.</p>
 						</div>
 					</div>
 				</section>
@@ -194,9 +129,18 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface tsd-parent-kind-module">
 						<a href="arguets.iarguetsoptions.html" class="tsd-kind-icon">IArgueTSOptions</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="arguets.iarguetsoptions.html#removeundefined" class="tsd-kind-icon">remove<wbr>Undefined</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="arguets.iarguments.html" class="tsd-kind-icon">IArguments</a>
 					</li>
@@ -206,30 +150,9 @@
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="arguets.iclioptionobj.html" class="tsd-kind-icon">ICLIOption<wbr>Obj</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-module">
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="arguets.ioptiondef.html" class="tsd-kind-icon">IOption<wbr>Def</a>
-						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="arguets.ioptiondef.html#alias" class="tsd-kind-icon">alias</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="arguets.ioptiondef.html#defaultvalue" class="tsd-kind-icon">default<wbr>Value</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="arguets.ioptiondef.html#name" class="tsd-kind-icon">name</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="arguets.ioptiondef.html#switch" class="tsd-kind-icon">switch</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="arguets.ioptiondef.html#type" class="tsd-kind-icon">type</a>
-							</li>
-						</ul>
 					</li>
-				</ul>
-				<ul class="after-current">
 				</ul>
 			</nav>
 		</div>

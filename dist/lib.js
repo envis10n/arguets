@@ -34,90 +34,84 @@ function getEnclosed(args) {
  */
 function getOptions(args, defs = []) {
     const reg1 = new RegExp(/\-\-?(\w+)/);
-    const res = [];
+    const res = {};
     let i = args.findIndex((e) => reg1.test(e));
     while (i !== -1) {
         const def = defs.find((e) => `--${e.name}` === args[i] || `-${e.alias}` === args[i]);
         if (def !== undefined) {
-            if (def.switch) {
-                args.splice(i, 1);
-                res.push({
-                    name: def.name,
-                    value: true,
-                });
-            }
-            else {
-                if (args[i + 1] !== undefined) {
-                    let val = args[i + 1];
-                    switch (def.type) {
-                        case "boolean":
-                            if (val === "true") {
-                                val = true;
-                            }
-                            else {
-                                val = false;
-                            }
-                            break;
-                        case "json":
-                            try {
-                                val = JSON.parse(val);
-                            }
-                            catch (e) {
-                                val = null;
-                            }
-                            break;
-                        case "string":
-                            val = val;
-                            break;
-                        case "number":
-                            if (!isNaN(val)) {
-                                val = Number(val);
-                            }
-                            else {
-                                val = 0;
-                            }
-                            break;
-                        default:
-                            break;
-                    }
-                    res.push({
-                        name: def.name,
-                        value: val,
-                    });
-                    args.splice(i, 2);
+            if (res[def.name] === undefined) {
+                if (def.switch) {
+                    args.splice(i, 1);
+                    res[def.name] = true;
                 }
                 else {
-                    res.push({
-                        name: def.name,
-                        value: null,
-                    });
-                    args.splice(i, 1);
+                    if (args[i + 1] !== undefined) {
+                        let val = args[i + 1];
+                        switch (def.type) {
+                            case "boolean":
+                                if (val === "true") {
+                                    val = true;
+                                }
+                                else {
+                                    val = false;
+                                }
+                                break;
+                            case "json":
+                                try {
+                                    val = JSON.parse(val);
+                                }
+                                catch (e) {
+                                    val = null;
+                                }
+                                break;
+                            case "string":
+                                val = val;
+                                break;
+                            case "number":
+                                if (!isNaN(val)) {
+                                    val = Number(val);
+                                }
+                                else {
+                                    val = 0;
+                                }
+                                break;
+                            default:
+                                break;
+                        }
+                        res.push({
+                            name: def.name,
+                            value: val,
+                        });
+                        args.splice(i, 2);
+                    }
+                    else {
+                        res.push({
+                            name: def.name,
+                            value: null,
+                        });
+                        args.splice(i, 1);
+                    }
                 }
             }
-        }
-        else {
-            if (args[i].substring(0, 2) === "--") {
-                args[i] = args[i].substring(2);
-            }
             else {
-                args[i] = args[i].substring(1);
+                if (def.switch) {
+                    args.splice(i, 1);
+                }
+                else {
+                    args.splice(i, 2);
+                }
             }
-            res.push({
-                name: args[i],
-                value: true,
-            });
-            args.splice(i, 1);
         }
         i = args.findIndex((e) => reg1.test(e));
     }
     return res;
 }
 /**
- * Returns the processed arguments array and an array of parsed command line options.
- * @param args The argument array to process.
- * @param defs An array of option definitions.
+ * Returns the processed arguments array and an object containing the options parsed.
+ * @param {string[]} args Arguments array. Default: process.argv.slice(2)
+ * @param {ArgueTS.IOptionDef[]} defs Option definition array. Default: undefined.
  */
-function arguets(args, defs) {
+function ArgueTS(args = process.argv.slice(2), defs) {
     args = getEnclosed(args);
     const options = getOptions(args, defs);
     return {
@@ -125,4 +119,4 @@ function arguets(args, defs) {
         options,
     };
 }
-module.exports = arguets;
+module.exports = ArgueTS;
