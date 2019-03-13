@@ -74,16 +74,10 @@ function getOptions(args: string[], defs: ArgueTS.IOptionDef[] = []): ArgueTS.IC
 
                                 break;
                         }
-                        res.push({
-                            name: def.name,
-                            value: val,
-                        });
+                        res[def.name] = val;
                         args.splice(i, 2);
                     } else {
-                        res.push({
-                            name: def.name,
-                            value: null,
-                        });
+                        res[def.name] = null;
                         args.splice(i, 1);
                     }
                 }
