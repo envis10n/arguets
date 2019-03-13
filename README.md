@@ -29,7 +29,7 @@ const result: IArguments = ArgueTS(test, [testOpt]);
 	Result:
 	{
 		"args": ["test", "1", "2", "3"],
-		"options": [{"name":"test", value: "OK"}]
+		"options": {"test": "OK"}
 	}
 */
 ```
@@ -48,7 +48,7 @@ const result = ArgueTS(test, [testOpt]);
 	Result:
 	{
 		"args": ["test", "1", "2", "3"],
-		"options": [{"name":"test", value: "OK"}]
+		"options": {"test", "OK"}
 	}
 */
 ```
