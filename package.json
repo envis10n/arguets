@@ -6,7 +6,8 @@
   "scripts": {
     "start": "tsc && node .",
     "docgen": "typedoc ./src",
-    "build": "tsc && typedoc ./src"
+    "build": "tsc && typedoc ./src",
+    "install": "npm i typescript --save-dev && tsc"
   },
   "repository": "https://github.com/envis10n/arguets.git",
   "author": "envis10n <envis10n@protonmail.com>",
