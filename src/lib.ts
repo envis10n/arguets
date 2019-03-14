@@ -34,10 +34,12 @@ function getOptions(args: string[], defs: ArgueTS.IOptionDef[] = []): ArgueTS.IC
     const res: ArgueTS.ICLIOptionObj = {};
     let i: number = args.findIndex((e) => reg1.test(e));
     while (i !== -1) {
-        const def: ArgueTS.IOptionDef | undefined = defs.find(
+        const defI: number = defs.findIndex(
             (e) => `--${e.name}` === args[i] || `-${e.alias}` === args[i],
         );
-        if (def !== undefined) {
+        if (defI !== -1) {
+            defs.splice(defI, 1);
+            const def: ArgueTS.IOptionDef = defs[defI];
             if (res[def.name] === undefined) {
                 if (def.switch) {
                     args.splice(i, 1);
@@ -90,6 +92,12 @@ function getOptions(args: string[], defs: ArgueTS.IOptionDef[] = []): ArgueTS.IC
             }
         }
         i = args.findIndex((e) => reg1.test(e));
+    }
+    // Add in default values.
+    for (const def of defs) {
+        if (def.defaultValue !== undefined) {
+            res[def.name] = def.defaultValue;
+        }
     }
     return res;
 }
