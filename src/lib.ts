@@ -38,7 +38,9 @@ function getOptions(args: string[], defs: ArgueTS.IOptionDef[] = []): ArgueTS.IC
             (e) => `--${e.name}` === args[i] || `-${e.alias}` === args[i],
         );
         if (defI !== -1) {
-            defs.splice(defI, 1);
+            if (defI > 0) {
+                defs.splice(defI, 1);
+            }
             const def: ArgueTS.IOptionDef = defs[defI];
             if (res[def.name] === undefined) {
                 if (def.switch) {
