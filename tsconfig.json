@@ -61,5 +61,8 @@
     "name": "ArgueTS",
     "mode": "file",
     "out": "docs"
-  }
+  },
+  "exclude": [
+    "./**/*.test.ts"
+  ]
 }
