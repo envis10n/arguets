@@ -41,7 +41,7 @@ function getOptions(
     args: string[],
     defs: ArgueTS.IOptionDef[] = []
 ): ArgueTS.ICLIOptionObj {
-    const reg1: RegExp = new RegExp(/\-\-?(\w+)/);
+    const reg1: RegExp = new RegExp(/\-\-?((?!\d)\w+)/);
     const res: ArgueTS.ICLIOptionObj = {};
     let i: number = args.findIndex((e) => reg1.test(e));
     while (i !== -1) {
@@ -103,13 +103,9 @@ function getOptions(
                         args.splice(i, 2);
                     }
                 }
-            } else {
-                args.splice(i, 1);
             }
-        } else {
-            args.splice(i, 1);
         }
-        i = args.findIndex((e) => reg1.test(e));
+        i = args.findIndex((e, ind) => reg1.test(e) && ind > 1);
     }
     // Add in default values.
     for (const def of defs) {
