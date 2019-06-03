@@ -1,27 +1,31 @@
 {
-  "name": "arguets",
-  "version": "1.4.0",
-  "description": "TypeScript arguments parser.",
-  "main": "dist/lib.js",
-  "scripts": {
-    "start": "tsc && node .",
-    "docgen": "typedoc ./src",
-    "build": "tsc && typedoc ./src",
-    "test": "jest"
-  },
-  "repository": "https://github.com/envis10n/arguets.git",
-  "author": "envis10n <envis10n@protonmail.com>",
-  "license": "MIT",
-  "private": false,
-  "types": "src/lib.ts",
-  "devDependencies": {
-    "@types/jest": "^24.0.11",
-    "jest": "^24.7.1",
-    "ts-jest": "^24.0.2",
-    "typedoc": "^0.14.2",
-    "typescript": "^3.3.3333"
-  },
-  "dependencies": {
-    "@types/node": "^11.11.3"
-  }
+    "name": "arguets",
+    "version": "1.4.0",
+    "description": "TypeScript arguments parser.",
+    "main": "dist/lib.js",
+    "scripts": {
+        "start": "tsc && node .",
+        "docgen": "typedoc ./src",
+        "build": "tsc && typedoc ./src",
+        "test": "jest"
+    },
+    "files": [
+        "dist",
+        "docs"
+    ],
+    "repository": "https://github.com/envis10n/arguets.git",
+    "author": "envis10n <envis10n@protonmail.com>",
+    "license": "MIT",
+    "private": false,
+    "types": "src/lib.ts",
+    "devDependencies": {
+        "@types/jest": "^24.0.11",
+        "jest": "^24.7.1",
+        "ts-jest": "^24.0.2",
+        "typedoc": "^0.14.2",
+        "typescript": "^3.3.3333"
+    },
+    "dependencies": {
+        "@types/node": "^11.11.3"
+    }
 }
