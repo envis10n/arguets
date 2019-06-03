@@ -105,7 +105,7 @@ function getOptions(
                 }
             }
         }
-        i = args.findIndex((e, ind) => reg1.test(e) && ind > 1);
+        i = args.findIndex((e, ind) => reg1.test(e) && ind > i);
     }
     // Add in default values.
     for (const def of defs) {
